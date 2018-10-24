@@ -57,6 +57,7 @@ rfm_auto <- function(data, id="id", payment="payment", date="date",
   lower_breaks <- function(breaks) {
     c(breaks[1], breaks[-c(1,length(breaks))] + 1)
   }
+                                          
   
   upper_breaks <- function(breaks) {
     c(breaks[1], breaks[-c(1,length(breaks))] - 1)
