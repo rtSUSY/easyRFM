@@ -1,9 +1,14 @@
 # easyRFM - An easy way to RFM analysis by R
 Koji MAKIYAMA  
-
+rtSUSY
 
 
 ## Overview
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+At First, this easyRFM is NOT same with easyRFM by author hoxo-m.
+I modify into what I want at 2018/10/24 JST. 
+And of course, I am gonna rename this repository and what I should do.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 About RFM analysis:
 
