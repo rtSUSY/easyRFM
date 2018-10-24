@@ -38,10 +38,13 @@ rfm_auto <- function(data, id="id", payment="payment", date="date",
     group_by_(.dots = id) %>%
     summarise_(.dots = dots %>% setNames(c("Recency", "Frequency", "Monetary")))
   
-  r_breaks <- rfm_compute_breaks(rfm$Recency,   breaks["r"])
-  f_breaks <- rfm_compute_breaks(rfm$Frequency, breaks["f"])
-  m_breaks <- rfm_compute_breaks(rfm$Monetary,  breaks["m"])
-  
+  #r_breaks <- rfm_compute_breaks(rfm$Recency,   breaks["r"])
+  #f_breaks <- rfm_compute_breaks(rfm$Frequency, breaks["f"])
+  #m_breaks <- rfm_compute_breaks(rfm$Monetary,  breaks["m"])
+  r_breaks <- as.POSIXct(c("2007/05/03 JST", "2007/05/22 JST", "2007/06/11 JST", "2007/07/01 JST"))
+  f_breaks <- c(1, 20, 40, 60)
+  m_breaks <- c(1, 100000, 200000, 300000)
+
   max_date <- max(r_breaks)
   if(!exact) {
     r_breaks_date <- r_breaks %>% as.Date(tz=tz)
